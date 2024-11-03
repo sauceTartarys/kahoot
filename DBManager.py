@@ -8,7 +8,7 @@ class DBManager:
 
         def create_tables(self):
             cursor = self.connection.cursor()
-            cursor.execute("""""
+            cursor.execute("""
             CREATE TABLE IF NOT EXISTS Options (
                 Oprion_id INT PRIMARY KEY,
                 Question_id int,
