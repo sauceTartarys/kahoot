@@ -3,13 +3,12 @@
 {% block content %}
 
 <p> Деякий вміст сторінки home page</p>
-{{quizzes}}
 {% for quiz in quizzes %}
     <h1>{{quiz[1] }}</h1>
     <p>{{quiz[2] }}</p>
-    <a href="#">Перейти</a>
+<a href="/quizz/{{quiz[0]}}">Перейти</a>
 
-{% endbfor %}
+{% endfor %}
 
 {% endblock %}
 

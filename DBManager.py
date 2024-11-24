@@ -53,7 +53,7 @@ class DBManager:
         return res
     def get_questions(self, quiz_id):
         cursor = self.connection.cursor()
-        cursor.execute("SELECT * Questions WHERE quiz_id = ?",[quiz_id])
+        cursor.execute("SELECT * from Questions WHERE quiz_id = ?",[quiz_id])
         res = cursor.fetchall()
         self.connection.commit()
         return res
