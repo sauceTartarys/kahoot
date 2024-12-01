@@ -57,3 +57,9 @@ class DBManager:
         res = cursor.fetchall()
         self.connection.commit()
         return res
+    def get_options(self, Question_id):
+        cursor = self.connection.cursor()
+        cursor.execute("SELECT * from Options WHERE Question_id = ?",[Question_id])
+        res = cursor.fetchall()
+        cursor.close()
+        return res
