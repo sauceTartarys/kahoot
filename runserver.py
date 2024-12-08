@@ -41,7 +41,7 @@ def show_question(quizz_id):
 @app.route("/quizz/<int:quizz_id>/answer", methods=["POST"])
 def answer_func(quizz_id):
     session["quest_index"] += 1
-    if len(session["questions"]) <= session["quest_index"]
+    if len(session["questions"]) <= session["quest_index"]:
         return redirect(url_for("result", quizz_id=quizz_id))
     else:
         return redirect(url_for("show_question", quizz_id=quizz_id))
@@ -50,4 +50,4 @@ def answer_func(quizz_id):
 def result(quizz_id):
     return "РЕЗУЛЬТАТ"
 
-app.run(port=444)
+app.run(port=8000)
